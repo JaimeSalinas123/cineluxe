@@ -10,7 +10,7 @@ body {
 
 .cartel {
     width: 100%;
-    padding: 100px 0;
+    padding: 75px 0;
     background-color: transparent;
 }
 
@@ -62,4 +62,67 @@ body {
     color: black;
     margin: 5px 0 0 0;
     font-size: 1rem;
+}
+
+.now-showing {
+    width: 100%;
+    padding: 40px 0;
+    background-color: transparent;
+}
+
+.now-showing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.now-showing-header {
+    grid-column: 1 / -1;
+}
+
+.now-showing-header h2 {
+    color: black;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.movie-card {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.movie-content {
+    text-align: center;
+}
+
+.movie-content h2 {
+    color: black;
+    font-size: 1.2rem;
+    margin: 10px 0 5px 0;
+    line-height: 1.4;
+}
+
+.movie-content img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    background-color: transparent;
+    border: none;
+    display: block;
+}
+
+.movie-content p {
+    color: black;
+    margin: 5px 0 0 0;
+    font-size: 1rem;
+}
+
+.movie-link {
+    text-decoration: none;
+    color: inherit;
 }

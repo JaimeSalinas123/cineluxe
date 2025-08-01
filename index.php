@@ -19,7 +19,9 @@
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">CineLuxe</span>
         </a>
         <div class="flex items-center space-x-6 rtl:space-x-reverse">
-            <a href="tel:5541251234" class="self-center text-1xl font-semibold whitespace-nowrap dark:text-white">Locations</a>
+            <a href="#" class="self-center text-1xl font-semibold whitespace-nowrap dark:text-white">Movies</a>
+            <a href="#" class="self-center text-1xl font-semibold whitespace-nowrap dark:text-white">Junior Room</a>
+            <a href="#" class="self-center text-1xl font-semibold whitespace-nowrap dark:text-white">Luxecard</a>
             <a href="#" class="self-center text-1xl font-semibold whitespace-nowrap dark:text-white">Login</a>
         </div>
     </div>
@@ -87,7 +89,7 @@
             <div class="cartel-card">
                 <a href="URL_DESTINO" class="card-link" target="_blank">
                     <div class="card-text">
-                        <h2>Formula 1 <br>la pelicula</h2>
+                        <h2>Formula 1 <br>The Movie</h2>
                         <img src="Cineluxe-imgs/f1-themovie.jpg" alt="the bad guys">
                         <p>For all ages</p>
                         <p>156 minutes</p>
@@ -98,6 +100,62 @@
             </div>
         </div>
     </section>
+
+   <section>
+    <div class="now-showing">
+        <div class="now-showing-container">
+            <div class="now-showing-header">
+                <h2>Coming soon to cinema</h2>
+            </div>
+
+            <div class="movie-card">
+                <div class="movie-content">
+                    <h2>Exorcism: <br>The ritual</h2>
+                    <img src="Cineluxe-imgs/Exorcismo El Ritual (2025).jpg" alt="Exorcismo El Ritual (2025)">
+                    <p>Over 15 years old</p>
+                    <p>98 minutes</p>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <div class="movie-content">
+                    <h2>Dracula: <br>The love tale</h2>
+                    <img src="Cineluxe-imgs/dracula 2025.jpg" alt="dracula the love tale">
+                    <p>Over 15 years old</p>
+                    <p>129 minutes</p>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <div class="movie-content">
+                    <h2>The ugly <br>Stepsister</h2>
+                    <img src="Cineluxe-imgs/theuglystepsister.jpg" alt="the ugly stepsister">
+                    <p>For all ages</p>
+                    <p>110 minutes</p>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <div class="movie-content">
+                    <h2>Freakier Friday <br>Disney 2025</h2>
+                    <img src="Cineluxe-imgs/freakier friday.jpg" alt="Freakier Friday">
+                    <p>For all ages</p>
+                    <p>90 minutes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>  
+
+<section>
+    <div class="location">
+        <div class="location-container">
+            <div class="location-text">
+                <h2>Locations</h2>
+            </div>
+        </div>
+    </div>
+</section>
 </header>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
