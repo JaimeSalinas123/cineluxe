@@ -146,16 +146,6 @@
         </div>
     </div>
 </section>  
-
-<section>
-    <div class="location">
-        <div class="location-container">
-            <div class="location-text">
-                <h2>Locations</h2>
-            </div>
-        </div>
-    </div>
-</section>
 </header>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
