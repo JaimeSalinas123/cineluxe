@@ -20,8 +20,7 @@
         </a>
         <div class="flex items-center space-x-6 rtl:space-x-reverse">
             <a href="index.php" class="self-center text-1xl font-semibold whitespace-nowrap dark:text-white">Movies</a>
-            <a href="/CineLuxe/views/gaming-room.php" class="self-center text-1xl font-semibold whitespace-nowrap dark:text-white">Gaming Room</a>
-            <a href="#" class="self-center text-1xl font-semibold whitespace-nowrap dark:text-white">Luxecard</a>
+            <a href="/CineLuxe/views/luxecard.php" class="self-center text-1xl font-semibold whitespace-nowrap dark:text-white">Luxecard</a>
             <a href="#" class="self-center text-1xl font-semibold whitespace-nowrap dark:text-white">Login</a>
         </div>
     </div>
