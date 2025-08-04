@@ -228,3 +228,36 @@ body {
     letter-spacing: 1px;
 }
 
+.float {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 18px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.float i {
+    color: white;
+    font-size: 1.5em;
+}
+
+@media screen and (min-width: 768px) {
+    .float {
+        width: 60px;
+        height: 60px;
+        bottom: 30px;
+        right: 30px;
+    }
+    .float i {
+        font-size: 1.8em; 
+    }
+}
