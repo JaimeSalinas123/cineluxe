@@ -1,3 +1,9 @@
+<?php session_start(); ?>
+<?php if (isset($_SESSION['error'])): ?>
+    <div class="bg-red-100 text-red-700 p-2 mb-4">
+        <?= $_SESSION['error']; unset($_SESSION['error']); ?>
+    </div>
+<?php endif; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +17,15 @@
     <link rel="stylesheet" href="../CineLuxe/design/login.css">
     <title>CineLuxe</title>
 </head>
+<?php if (isset($_SESSION['error'])): ?>
+<div class="mb-4 p-3 bg-red-50 border border-red-200 text-red-600 text-sm rounded-lg flex items-start">
+    <svg class="w-4 h-4 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+    </svg>
+    <div><?= htmlspecialchars($_SESSION['error']) ?></div>
+</div>
+<?php unset($_SESSION['error']); ?>
+<?php endif; ?>
 <body>
 
 <section class="flex flex-col md:flex-row min-h-screen">
@@ -26,43 +41,49 @@
 
       <h1 class="text-xl md:text-2xl font-bold leading-tight mt-6">Create your account</h1>
 
-      <form class="mt-6" action="#" method="POST">
+      <form class="mt-6" action="../core/register-user.php" method="POST">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label class="block text-gray-700">First Name</label>
-            <input type="text" name="" id="" placeholder="Enter First Name" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-black focus:bg-white focus:outline-none" autofocus autocomplete required>
+            <input type="text" name="nombre" placeholder="Enter First Name" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-black focus:bg-white focus:outline-none" autofocus autocomplete required>
           </div>
           
           <div>
-            <label class="block text-gray-700">Last Name</label>
-            <input type="text" name="" id="" placeholder="Enter Last Name" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-black focus:bg-white focus:outline-none" required>
+            <label class="block text-gray-700">Phone Number</label>
+            <input type="text" name="telefono" placeholder="Enter Phone Number" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-black focus:bg-white focus:outline-none" required>
           </div>
         </div>
 
         <div class="mt-4">
           <label class="block text-gray-700">Email Address</label>
-          <input type="email" name="" id="" placeholder="Enter Email Address" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-black focus:bg-white focus:outline-none" required>
+          <input type="email" name="email" placeholder="Enter Email Address" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-black focus:bg-white focus:outline-none" required>
         </div>
 
         <div class="mt-4">
           <label class="block text-gray-700">Password</label>
-          <input type="password" name="" id="" placeholder="Enter Password (min 6 characters)" minlength="6" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-black focus:bg-white focus:outline-none" required>
+          <input type="password" name="password" placeholder="Enter Password (min 6 characters)" minlength="6" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-black focus:bg-white focus:outline-none" required>
         </div>
 
         <div class="mt-4">
           <label class="block text-gray-700">Confirm Password</label>
-          <input type="password" name="" id="" placeholder="Confirm Password" minlength="6" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-black focus:bg-white focus:outline-none" required>
+          <input type="password" name="confirm_password" placeholder="Confirm Password" minlength="6" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-black focus:bg-white focus:outline-none" required>
         </div>
 
-        <div class="mt-4">
-          <label class="flex items-start">
-            <input type="checkbox" name="remember" class="form-checkbox h-5 w-5 text-gray-700 mt-1">
-            <span class="ml-2 text-gray-700">I agree to the <a href="#" class="text-black hover:underline">Terms and Conditions</a></span>
-          </label>
-        </div>
+<div class="mt-4">
+  <label class="flex items-center">
+    <input 
+      type="checkbox" 
+      name="remember" 
+      class="h-5 w-5 rounded border-gray-300 text-black focus:ring-2 focus:ring-black transition duration-150"
+      required
+    >
+    <span class="ml-2 text-gray-700">
+      Acepto los <a href="#" class="text-black hover:underline font-medium transition duration-150">Términos y Condiciones</a>
+    </span>
+  </label>
+</div>
 
-        <button type="submit" class="w-full block bg-black hover:bg-gray-800 focus:bg-gray-800 text-white font-semibold rounded-lg
-              px-4 py-3 mt-6 transition duration-200">Register</button>
+        <button type="submit" class="w-full block bg-black hover:bg-gray-800 focus:bg-gray-800 text-white font-semibold rounded-lg px-4 py-3 mt-6 transition duration-200">Register</button>
       </form>
 
       <hr class="my-6 border-gray-300 w-full">
