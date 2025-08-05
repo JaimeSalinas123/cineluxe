@@ -17,15 +17,6 @@
     <link rel="stylesheet" href="../CineLuxe/design/login.css">
     <title>CineLuxe</title>
 </head>
-<?php if (isset($_SESSION['error'])): ?>
-<div class="mb-4 p-3 bg-red-50 border border-red-200 text-red-600 text-sm rounded-lg flex items-start">
-    <svg class="w-4 h-4 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-    </svg>
-    <div><?= htmlspecialchars($_SESSION['error']) ?></div>
-</div>
-<?php unset($_SESSION['error']); ?>
-<?php endif; ?>
 <body>
 
 <section class="flex flex-col md:flex-row min-h-screen">
@@ -40,7 +31,12 @@
       <h1 class="text-xl font-bold">CineLuxe</h1>
 
       <h1 class="text-xl md:text-2xl font-bold leading-tight mt-6">Create your account</h1>
-
+<?php if (isset($_SESSION['error'])): ?>
+    <div class="error-container">
+        <?= $_SESSION['error'] ?>
+        <?php unset($_SESSION['error']); ?>
+    </div>
+<?php endif; ?>
       <form class="mt-6" action="../core/register-user.php" method="POST">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -110,5 +106,54 @@
 </section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    <?php if (isset($_SESSION['toast_message'])): ?>
+        const message = '<?= addslashes($_SESSION["toast_message"]) ?>';
+        const [type, text] = message.split(':');
+        
+        const toast = document.createElement('div');
+        toast.style.position = 'fixed';
+        toast.style.top = '20px';
+        toast.style.right = '20px';
+        toast.style.padding = '12px 16px';
+        toast.style.borderRadius = '4px';
+        toast.style.zIndex = '10000';
+        toast.style.color = 'white';
+        toast.style.fontWeight = '500';
+        toast.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+        toast.style.animation = 'fadeIn 0.3s, fadeOut 0.5s 4s forwards';
+        
+        if (type === 'ERROR') {
+            toast.style.background = '#ef4444'; 
+        } else if (type === 'WARNING') {
+            toast.style.background = '#f59e0b'; 
+        } else if (type === 'FIELD_ERROR') {
+            toast.style.background = '#3b82f6'; 
+        } else { 
+            toast.style.background = '#10b981'; 
+        }
+        
+        toast.textContent = text;
+        document.body.appendChild(toast);
+
+        setTimeout(() => toast.remove(), 4000);
+        
+        <?php unset($_SESSION['toast_message']); ?>
+    <?php endif; ?>
+});
+
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeOut {
+        to { opacity: 0; }
+    }
+`;
+document.head.appendChild(style);
+</script>
 </body>
 </html>
