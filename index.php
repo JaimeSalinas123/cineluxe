@@ -20,8 +20,6 @@
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">CineLuxe</span>
         </a>
         <div class="flex items-center space-x-6 rtl:space-x-reverse">
-            <a href="index.php" class="self-center text-1xl font-semibold whitespace-nowrap dark:text-white">Movies</a>
-            <a href="/CineLuxe/views/luxecard.php" class="self-center text-1xl font-semibold whitespace-nowrap dark:text-white">Luxecard</a>
             <a href="/CineLuxe/views/login.php" class="self-center text-1xl font-semibold whitespace-nowrap dark:text-white">Login</a>
         </div>
     </div>
@@ -57,7 +55,7 @@
                 </div>
 
             <div class="cartel-card">
-                <a href="URL_DESTINO" class="card-link" target="_blank">
+                <a href="/CineLuxe/views/login.php" class="card-link" target="_blank">
                     <div class="card-text">
                         <h2>The bad guys 2: back in badness</h2>
                         <img src="Cineluxe-imgs/the-bad-guys-2.avif" alt="the bad guys">
@@ -68,7 +66,7 @@
             </div>
 
             <div class="cartel-card">
-                <a href="URL_DESTINO" class="card-link" target="_blank">
+                <a href="/CineLuxe/views/login.php" class="card-link" target="_blank">
                     <div class="card-text">
                         <h2>The fantastic four: the first step</h2>
                         <img src="Cineluxe-imgs/the-fantastic-four.jpg" alt="the bad guys">
@@ -79,7 +77,7 @@
             </div>
 
              <div class="cartel-card">
-                <a href="URL_DESTINO" class="card-link" target="_blank">
+                <a href="/CineLuxe/views/login.php" class="card-link" target="_blank">
                     <div class="card-text">
                         <h2>Superman (2025) <br>Look up</h2>
                         <img src="Cineluxe-imgs/superman 2025.jpg" alt="the bad guys">
@@ -90,7 +88,7 @@
             </div>
 
             <div class="cartel-card">
-                <a href="URL_DESTINO" class="card-link" target="_blank">
+                <a href="/CineLuxe/views/login.php" class="card-link" target="_blank">
                     <div class="card-text">
                         <h2>Formula 1 <br>The Movie</h2>
                         <img src="Cineluxe-imgs/f1-themovie.jpg" alt="the bad guys">

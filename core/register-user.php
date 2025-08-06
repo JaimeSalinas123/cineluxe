@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($stmt->execute()) {
             $_SESSION['user_id'] = $stmt->insert_id;
             $_SESSION['toast_message'] = "SUCCESS:¡Registro exitoso! Bienvenido/a " . htmlspecialchars($nombre);
-            header("Location: ../index.php");
+            header("Location: /CineLuxe/views/movie.php");
             exit();
         } else {
             throw new Exception("ERROR:Error al registrar: " . $conn->error);

@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['user_name'] = $user['nombre'];
         $_SESSION['logged_in'] = true;
         $_SESSION['toast_message'] = "Bienvenido de nuevo, " . htmlspecialchars($user['nombre']) . "!";
-        header("Location: /cineluxe/index.php");
+        header("Location: /CineLuxe/views/movie.php");
         exit();
 
     } catch (Exception $e) {
