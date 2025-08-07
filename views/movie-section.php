@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/CineLuxe/design/index.css">
+    <link rel="stylesheet" href="/CineLuxe/design/movie-section2.css">
     <title>CineLuxe</title>
 </head>
 <body>
@@ -67,7 +67,244 @@
 </nav>
 
 <header>
-    
+<section class="movie-1" id="#">
+    <div class="container mx-auto px-4 py-8 max-w-4xl bg-white text-gray-800">
+        <div class="flex flex-col md:flex-row gap-8 mb-8">
+            <div class="w-full md:w-1/3 aspect-[2/3]">
+                <img class="w-full h-full object-cover rounded-lg shadow-lg" 
+                     src="../Cineluxe-imgs/the-bad-guys-2.avif" 
+                     alt="Póster de The Bad Guys 2">
+            </div>
+                
+            <div class="w-full md:w-2/3">
+                <h1 class="text-3xl font-bold mb-2">The bad buys 2</h1>
+                <p class="text-lg font-semibold mb-4">
+                    <span class="bg-gray-200 px-2 py-1 rounded">A - Public All</span> | 
+                    The Bad Guys 2 | 104 min | 2025 
+                </p>
+                
+                <p class="mb-6">After turning over a new leaf, the Bad Guys are enjoying their reputation as reformed citizens — until a new wave of crimes hits the city, and all the clues point to them. With their names on the line and public trust crumbling, Mr. Wolf and the crew are forced back into action.
+
+To uncover the truth, they'll have to outsmart a mysterious new criminal mastermind, dodge the law, and test their friendship like never before. Packed with clever twists, wild chases, and the same hilarious charm, The Bad Guys 2 is a fast-paced adventure about redemption, teamwork, and what it really means to be good.</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div>
+                <h2 class="text-xl font-bold mb-2">Release Date:</h2>
+                <p>2025-07-24</p>
+            </div>
+            <div>
+                <h2 class="text-xl font-bold mb-2">Original Title:</h2>
+                <p>The Bad Guys 2</p>
+            </div>
+            <div>
+                <h2 class="text-xl font-bold mb-2">Genre:</h2>
+                <p>Animation, Comedy, Action</p>
+            </div>
+            <div>
+                <h2 class="text-xl font-bold mb-2"> Cast (voices):</h2>
+                <p>Sam Rockwell, Marc Maron, Awkwafina, Craig Robinson, Anthony Ramos</p>
+            </div>
+            <div>
+                <h2 class="text-xl font-bold mb-2">Director</h2>
+                <p>Pierre Perifel</p>
+            </div>
+            <div>
+                <h2 class="text-xl font-bold mb-2">Production:</h2>
+                <p>DreamWorks Animation</p>
+            </div>
+            <div>
+                <h2 class="text-xl font-bold mb-2">Age Rating:</h2>
+                <p>A. Suitable for all audiences</p>
+            </div>
+            <div>
+                <h2 class="text-xl font-bold mb-2">Now Showing In:</h2>
+                <p>201 [DUB] VIP</p>
+            </div>
+        </div>
+
+        <!-- Purchase Options Section -->
+        <div class="mt-12 space-y-8">
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <h3 class="text-xl font-bold mb-4 text-gray-800">Seleccionar cine</h3>
+                <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <option value="">-- Seleccione un cine --</option>
+                    <option value="cine1">Cineplex Centro</option>
+                    <option value="cine2">Cineplex Norte</option>
+                    <option value="cine3">Cineplex Sur</option>
+                    <option value="cine4">Cineplex Este</option>
+                </select>
+            </div>
+
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <h3 class="text-xl font-bold mb-4 text-gray-800">Seleccione opciones especiales de visualización</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-50">
+                        <input type="radio" name="viewing_option" value="DOB" class="h-5 w-5 text-blue-600" checked>
+                        <span class="ml-3 flex-grow">
+                            <span class="block font-medium">DOB</span>
+                            <span class="block text-sm text-gray-600">Doblada al español</span>
+                        </span>
+                        <span class="font-bold">$120</span>
+                    </label>
+                    
+                    <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-50">
+                        <input type="radio" name="viewing_option" value="2D" class="h-5 w-5 text-blue-600">
+                        <span class="ml-3 flex-grow">
+                            <span class="block font-medium">2D</span>
+                            <span class="block text-sm text-gray-600">Versión original 2D</span>
+                        </span>
+                        <span class="font-bold">$150</span>
+                    </label>
+                    
+                    <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-50">
+                        <input type="radio" name="viewing_option" value="SUBTITLE" class="h-5 w-5 text-blue-600">
+                        <span class="ml-3 flex-grow">
+                            <span class="block font-medium">Subtitulada</span>
+                            <span class="block text-sm text-gray-600">Versión subtitulada</span>
+                        </span>
+                        <span class="font-bold">$140</span>
+                    </label>
+                    
+                    <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-50">
+                        <input type="radio" name="viewing_option" value="VIP" class="h-5 w-5 text-blue-600">
+                        <span class="ml-3 flex-grow">
+                            <span class="block font-medium">VIP</span>
+                            <span class="block text-sm text-gray-600">Asientos premium + servicio</span>
+                        </span>
+                        <span class="font-bold">$250</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <h3 class="text-xl font-bold mb-4 text-gray-800">Seleccione fecha y hora</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Fecha</label>
+                        <input type="date" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Hora</label>
+                        <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            <option value="">-- Seleccione --</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="12:30">12:30 PM</option>
+                            <option value="15:00">3:00 PM</option>
+                            <option value="17:30">5:30 PM</option>
+                            <option value="20:00">8:00 PM</option>
+                            <option value="22:30">10:30 PM</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <h3 class="text-xl font-bold mb-4 text-gray-800">Seleccione alimentos</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="border border-gray-300 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="h-40 bg-gray-200 flex items-center justify-center">
+                            <!-- Replace with your image -->
+                            <span class="text-gray-500">Combo 1 Image</span>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold">Combo Uno</h4>
+                            <p class="text-sm text-gray-600 mb-2">Palomitas medianas + refresco grande</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold">$180</span>
+                                <button class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="border border-gray-300 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="h-40 bg-gray-200 flex items-center justify-center">
+                            <!-- Replace with your image -->
+                            <span class="text-gray-500">Combo 2 Image</span>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold">Combo Dos</h4>
+                            <p class="text-sm text-gray-600 mb-2">Palomitas grandes + 2 refrescos medianos + dulce</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold">$250</span>
+                                <button class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="border border-gray-300 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="h-40 bg-gray-200 flex items-center justify-center">
+                            <!-- Replace with your image -->
+                            <span class="text-gray-500">Combo 3 Image</span>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold">Combo Tres</h4>
+                            <p class="text-sm text-gray-600 mb-2">Palomitas gigantes + 4 refrescos + hot dogs</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold">$350</span>
+                                <button class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button id="resumeBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors">
+                    Resumen
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="resumeModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg max-w-md w-full mx-4 p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold">Resumen de compra</h3>
+                <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="space-y-4">
+                <div>
+                    <h4 class="font-bold">Película:</h4>
+                    <p>The Bad Guys 2</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold">Cine:</h4>
+                    <p id="modalCine">--</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold">Formato:</h4>
+                    <p id="modalFormat">--</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold">Fecha y hora:</h4>
+                    <p id="modalDate">--</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold">Alimentos:</h4>
+                    <p id="modalFood">--</p>
+                </div>
+            </div>
+            
+            <div class="mt-6 pt-4 border-t">
+                <button id="getTicketBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-colors">
+                    Obtener boleto
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
 </header>
 
 <footer class="bg-black">
@@ -158,6 +395,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<script src="/CineLuxe/script/ticket.js"></script>
 <script>
 (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="FRY_8A6L2tfZ2EbtiKL5T";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
 </script>
