@@ -97,7 +97,7 @@
 
 
 <div class="cartel-card">
-    <a href="/CineLuxe/views/movie-section.php" class="card-link">
+    <a href="/CineLuxe/views/movie-section.php?movie=bad-guys-2" class="card-link">
         <div class="card-text">
             <h2>The bad guys 2: back in badness</h2>
             <img src="../Cineluxe-imgs/the-bad-guys-2.avif" alt="The Bad Guys 2">
@@ -108,7 +108,7 @@
 </div>
 
 <div class="cartel-card">
-    <a href="/CineLuxe/views/movie-section.php" class="card-link">
+    <a href="/CineLuxe/views/movie-section.php?movie=fantastic-four" class="card-link">
         <div class="card-text">
             <h2>The fantastic four: the first step</h2>
             <img src="../Cineluxe-imgs/the-fantastic-four.jpg" alt="Fantastic Four">
@@ -119,7 +119,7 @@
 </div>
 
 <div class="cartel-card">
-    <a href="/CineLuxe/views/movie-section.php" class="card-link">
+    <a href="/CineLuxe/views/movie-section.php?movie=superman" class="card-link">
         <div class="card-text">
             <h2>Superman (2025) <br>Look up</h2>
             <img src="../Cineluxe-imgs/superman 2025.jpg" alt="Superman 2025">
@@ -130,7 +130,7 @@
 </div>
 
 <div class="cartel-card">
-    <a href="/CineLuxe/views/movie-section.php" class="card-link">
+    <a href="/CineLuxe/views/movie-section.php?movie=f1" class="card-link">
         <div class="card-text">
             <h2>Formula 1 <br>The Movie</h2>
             <img src="../Cineluxe-imgs/f1-themovie.jpg" alt="Formula 1 The Movie">

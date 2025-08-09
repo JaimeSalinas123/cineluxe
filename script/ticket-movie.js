@@ -1,28 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // This will work for all movie sections
-    document.querySelectorAll('.movie-1').forEach(movieSection => {
+    document.querySelectorAll('[class^="movie-"]').forEach(movieSection => {
         const resumeBtn = movieSection.querySelector('#resumeBtn');
         const closeModal = movieSection.querySelector('#closeModal');
         const modal = movieSection.querySelector('#resumeModal');
         const getTicketBtn = movieSection.querySelector('#getTicketBtn');
         
-        // Get form elements
         const cineSelect = movieSection.querySelector('select');
         const viewingOptions = movieSection.querySelectorAll('input[name="viewing_option"]');
         const dateInput = movieSection.querySelector('input[type="date"]');
         const timeSelect = movieSection.querySelectorAll('select')[1];
         const movieTitle = movieSection.querySelector('h1').textContent;
         
-        // Modal elements
         const modalCine = movieSection.querySelector('#modalCine');
         const modalFormat = movieSection.querySelector('#modalFormat');
         const modalDate = movieSection.querySelector('#modalDate');
         const modalFood = movieSection.querySelector('#modalFood');
         
-        // Storage for selected snacks
         let selectedFood = [];
         
-        // Add event listeners to snack buttons
         movieSection.querySelectorAll('.bg-blue-600.text-white').forEach(btn => {
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -30,15 +25,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 const foodName = foodContainer.querySelector('h4').textContent;
                 const foodPrice = foodContainer.querySelector('.font-bold').textContent;
                 const foodDescription = foodContainer.querySelector('p.text-sm').textContent;
-                
-                // Check if combo was already added
+
                 const existingIndex = selectedFood.findIndex(item => item.name === foodName);
                 
                 if(existingIndex >= 0) {
-                    // If exists, increment quantity
                     selectedFood[existingIndex].quantity += 1;
                 } else {
-                    // If not exists, add it
                     selectedFood.push({
                         name: foodName,
                         description: foodDescription,
@@ -47,12 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                 }
                 
-                // Visual feedback
                 this.textContent = '✓ Added';
                 this.classList.remove('bg-blue-600', 'hover:bg-blue-700');
                 this.classList.add('bg-green-500', 'hover:bg-green-600');
                 
-                // Reset after 1 second
                 setTimeout(() => {
                     this.textContent = 'Add';
                     this.classList.remove('bg-green-500', 'hover:bg-green-600');
@@ -60,13 +50,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 }, 1000);
             });
         });
-        
-        // Show modal
+
         resumeBtn.addEventListener('click', function() {
-            // Get selected cinema
             modalCine.textContent = cineSelect.options[cineSelect.selectedIndex].text || '--';
             
-            // Get selected format
             let selectedFormat = '--';
             viewingOptions.forEach(option => {
                 if (option.checked) {
@@ -75,12 +62,10 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             modalFormat.textContent = selectedFormat;
             
-            // Get selected date and time
             const dateValue = dateInput.value ? new Date(dateInput.value).toLocaleDateString('en-US') : '--';
             const timeValue = timeSelect.options[timeSelect.selectedIndex].text || '--';
             modalDate.textContent = `${dateValue} ${timeValue !== '--' ? 'at ' + timeValue : ''}`;
-            
-            // Show selected snacks
+
             if(selectedFood.length > 0) {
                 let foodHtml = '';
                 selectedFood.forEach(item => {
@@ -93,17 +78,14 @@ document.addEventListener('DOMContentLoaded', function() {
             
             modal.classList.remove('hidden');
         });
-        
-        // Close modal
+
         closeModal.addEventListener('click', function() {
             modal.classList.add('hidden');
         });
-        
-        // Get ticket
+
         getTicketBtn.addEventListener('click', function() {
             alert('Ticket generated successfully! Thank you for your purchase.');
             modal.classList.add('hidden');
-            // Here you would normally submit the form or process payment
         });
     });
 });
