@@ -82,10 +82,5 @@ document.addEventListener('DOMContentLoaded', function() {
         closeModal.addEventListener('click', function() {
             modal.classList.add('hidden');
         });
-
-        getTicketBtn.addEventListener('click', function() {
-            alert('Ticket generated successfully! Thank you for your purchase.');
-            modal.classList.add('hidden');
-        });
     });
 });
